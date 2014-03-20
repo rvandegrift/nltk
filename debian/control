@@ -1,0 +1,18 @@
+Source: python-nltk
+Maintainer: Ross Vandegrift <ross@kallisti.us>
+Section: python
+Priority: optional
+Standards-Version: 3.9.5
+Build-Depends: debhelper (>= 9), dh-python, python-all (>= 2.7), python-setuptools, libyaml-dev
+Homepage: http://www.nltk.org/
+Vcs-Browser: https://github.com/rvandegrift/nltk/tree/debian
+Vcs-Git: https://github.com/rvandegrift/nltk.git -b debian
+X-Python-Version: >= 2.7
+
+Package: python-nltk
+Architecture: all
+Depends: ${python:Depends}, ${misc:Depends}
+Description: Natural Language Toolkit Python modules (Python 2)
+ NLTK -- the Natural Language Toolkit -- is a suite of open source
+ Python modules, data sets and tutorials supporting research and
+ development in Natural Language Processing.

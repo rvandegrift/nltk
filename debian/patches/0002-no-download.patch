@@ -1,0 +1,23 @@
+From: Ross Vandegrift <ross@kallisti.us>
+Date: Thu, 20 Mar 2014 21:48:12 +0000
+Subject: no-download
+
+Diable downloading setuptools.
+---
+ setup.py | 3 ---
+ 1 file changed, 3 deletions(-)
+
+diff --git a/setup.py b/setup.py
+index e9e3b17..dfe0fd0 100644
+--- a/setup.py
++++ b/setup.py
+@@ -19,9 +19,6 @@ version_file = os.path.join(os.path.dirname(__file__), 'nltk', 'VERSION')
+ with open(version_file) as fh:
+     nltk_version = fh.read().strip()
+ 
+-import distribute_setup
+-distribute_setup.use_setuptools()
+-
+ from setuptools import setup, find_packages
+ 
+ #

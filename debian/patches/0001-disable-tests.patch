@@ -1,0 +1,19 @@
+From: Ross Vandegrift <ross@kallisti.us>
+Date: Wed, 19 Mar 2014 22:57:32 +0000
+Subject: disable-tests
+
+NLTK tests are broken: they attempt to import non-existent modules.
+---
+ setup.py | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index baa8d4c..e9e3b17 100644
+--- a/setup.py
++++ b/setup.py
+@@ -73,5 +73,4 @@ natural language processing.  NLTK requires Python 2.5 or higher.""",
+     packages = find_packages(),
+     zip_safe=False, # since normal files will be present too?
+     install_requires=['PyYAML>=3.09'],
+-    test_suite = 'nltk.test.simple',
+     )
